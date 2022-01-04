@@ -1,0 +1,2 @@
+# JavaFundamentals-Tasks
+Solutions
