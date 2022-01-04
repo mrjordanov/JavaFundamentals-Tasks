@@ -15,5 +15,6 @@ public class ExactSum {
 
 
        System.out.println(sum);
+       System.out.println(sum);
     }
 }
