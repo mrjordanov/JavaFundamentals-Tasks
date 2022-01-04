@@ -22,6 +22,6 @@ public class BeerKing {
                 }
         }
         System.out.printf("%s",str);
-
+        System.out.println("End");
     }
 }
