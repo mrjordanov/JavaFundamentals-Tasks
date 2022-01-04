@@ -12,9 +12,6 @@ public class ExactSum {
         BigDecimal number=new BigDecimal(scanner.nextLine());
                    sum=sum.add(number);
        }
-
-
-       System.out.println(sum);
        System.out.println(sum);
     }
 }
