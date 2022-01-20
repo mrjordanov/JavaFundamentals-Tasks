@@ -6,7 +6,6 @@ public class WaterOverflow {
 
         int n=Integer.parseInt(scanner.nextLine());
 
-
         int sumOfFill=0;
         int restForFill=255;
         for (int i = 1; i <=n ; i++) {

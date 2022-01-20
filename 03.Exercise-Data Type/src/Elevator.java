@@ -8,7 +8,6 @@ public class Elevator {
         int capacity = Integer.parseInt(scanner.nextLine());
 
         int liftTimes = (numberOfPeople / capacity);
-        int lastCourse = numberOfPeople % capacity;
 
          if (numberOfPeople <= capacity) {
             System.out.printf("1");

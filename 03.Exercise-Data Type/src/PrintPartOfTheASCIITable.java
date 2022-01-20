@@ -7,7 +7,6 @@ public class PrintPartOfTheASCIITable {
         int firstNumber=Integer.parseInt(scanner.nextLine());
         int secondNumber= Integer.parseInt(scanner.nextLine());
 
-
         for (int i = firstNumber; i <=secondNumber ; i++) {
             System.out.printf("%c ",i);
         }
