@@ -21,6 +21,7 @@ public class PeopleMain {
             input= scanner.nextLine();
         }
 
+
         information.stream().sorted((s1,s2)->Integer.compare(s1.getAge(),s2.getAge())).
                 forEach(s-> System.out.println(s));
 

@@ -33,10 +33,10 @@ public class Car {
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
-        builder.append("Type: ").append(this.type).append("\n");
-        builder.append("Model: ").append(this.model).append("\n");
-        builder.append("Color: ").append(this.color).append("\n");
-        builder.append("Horsepower: ").append(this.horsepower).append("\n");
+        builder.append("Type: ").append(type).append("\n");
+        builder.append("Model: ").append(model).append("\n");
+        builder.append("Color: ").append(color).append("\n");
+        builder.append("Horsepower: ").append(horsepower).append("\n");
         return builder.toString();
     }
 }

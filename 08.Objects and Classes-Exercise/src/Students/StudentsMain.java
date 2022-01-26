@@ -21,8 +21,9 @@ public class StudentsMain {
             information.add(student);
         }
 
-        information.stream().sorted((s2,s1)->Double.compare(s1.getGrade(),s2.getGrade())).
-                forEach(s-> System.out.printf("%s %s: %.2f",s.getFirstName(),s.getSecondName(),s.getGrade()).println());
+
+        information.stream().sorted((s2, s1) -> Double.compare(s1.getGrade(), s2.getGrade())).
+                forEach(s -> System.out.printf("%s %s: %.2f", s.getFirstName(), s.getSecondName(), s.getGrade()).println());
 
     }
 }
