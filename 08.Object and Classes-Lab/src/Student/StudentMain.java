@@ -1,3 +1,5 @@
+package Student;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -17,14 +19,11 @@ public class StudentMain {
             int age = Integer.parseInt(parts[2]);
             String city = parts[3];
 
-            if (isStudentExisting(students,firstName,lastName)){
-                Student student= getStudent(students,firstName,lastName);
-                student.setFirstName(firstName);
-                student.setLastName(lastName);
+            if (isStudentExisting(students, firstName, lastName)) {
+                Student student = getStudent(students, firstName, lastName);
                 student.setAge(age);
                 student.setCity(city);
-            }
-            else {
+            } else {
                 Student student = new Student(firstName, lastName, age, city);
                 students.add(student);
 
@@ -45,19 +44,19 @@ public class StudentMain {
     }
 
     private static Student getStudent(List<Student> students, String firstName, String lastName) {
-        Student existingStudent=null;
-        for (Student student: students) {
-            if (student.getFirstName().equals(firstName)&& student.getLastName().equals(lastName)){
-                existingStudent=student;
+        Student existingStudent = null;
+        for (Student student : students) {
+            if (student.getFirstName().equals(firstName) && student.getLastName().equals(lastName)) {
+                existingStudent = student;
             }
         }
 
-        return  existingStudent;
+        return existingStudent;
     }
 
     private static boolean isStudentExisting(List<Student> students, String firstName, String lastName) {
-        for (Student student:students) {
-            if (student.getFirstName().equals(firstName)&& student.getLastName().equals(lastName)){
+        for (Student student : students) {
+            if (student.getFirstName().equals(firstName) && student.getLastName().equals(lastName)) {
                 return true;
             }
         }

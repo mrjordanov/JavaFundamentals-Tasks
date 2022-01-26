@@ -7,7 +7,6 @@ public class RandomizeWords {
         String[] words = scanner.nextLine().split(" ");
 
         Random random = new Random();
-
         for (int i = 0; i < words.length ; i++) {
             int randomIndex= random.nextInt(words.length);
             String temp = words[i];
