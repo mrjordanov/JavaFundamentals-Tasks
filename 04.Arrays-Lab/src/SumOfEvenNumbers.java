@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class SumOfEvenNumbers {
@@ -7,6 +8,8 @@ public class SumOfEvenNumbers {
         String input = scanner.nextLine();
 
         String[] arr = input.split(" ");
+
+        int[] numbers = Arrays.stream(scanner.nextLine().split("\\s+")).mapToInt(e -> Integer.parseInt(e)).toArray();
 
         int[] newArr = new int[arr.length];
         int sum = 0;
