@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MagicSum {
@@ -21,5 +22,7 @@ public class MagicSum {
                 }
             }
         }
+
+        System.out.print(Arrays.toString(arr).replaceAll("[\\[\\],]",""));
     }
 }
