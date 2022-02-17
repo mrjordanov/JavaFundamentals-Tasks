@@ -9,12 +9,12 @@ public class SofUniReception {
         int numberOfStudentsToHandle = Integer.parseInt(scanner.nextLine());
 
         int totalStudentsPerHour = first + second + third;
-        int counter = 0;
+        //int counter = 0;
         int totalHours = 0;
         while (numberOfStudentsToHandle > 0) {
-            counter++;
+            //counter++;
             totalHours += 1;
-            if (counter % 4 == 0 ) {
+            if (totalHours % 4 == 0 ) {
                 continue;
             }
             if (numberOfStudentsToHandle <= totalStudentsPerHour) {
