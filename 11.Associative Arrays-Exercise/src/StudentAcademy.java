@@ -13,7 +13,7 @@ public class StudentAcademy {
             students.putIfAbsent(name,new ArrayList<>());
             students.get(name).add(grade);
         }
-        students
+       /* students
                 .entrySet()
                 .stream()
                 .filter(s->s.getValue().stream().mapToDouble(Double::doubleValue).average().getAsDouble()>=4.5)
@@ -24,6 +24,10 @@ public class StudentAcademy {
                 })
                 .forEach(s-> System.out.println(String.format("%s -> %.2f",s.getKey(),
                         s.getValue().stream().mapToDouble(Double::doubleValue).average().getAsDouble())));
+        */
+
+        students.entrySet().stream().filter(s1-> s1.getValue().stream().mapToDouble(Double::doubleValue).average().getAsDouble()>=4.5)
+                .forEach(s-> System.out.printf("%s -> %.2f",s.getKey(),s.getValue().stream().mapToDouble(Double::doubleValue).average().getAsDouble()).println());
 
     }
 }

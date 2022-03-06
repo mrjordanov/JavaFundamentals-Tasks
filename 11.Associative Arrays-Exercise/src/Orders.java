@@ -33,6 +33,6 @@ public class Orders {
 
         //вариант
         //quantities.forEach((k,v)-> System.out.println(String.format("%s -> %.2f",k,v*items.get(k))));
-        quantities.forEach((k,v)-> System.out.printf("%s -> %.2f",k,v* items.get(k)).println());
+       // quantities.forEach((k,v)-> System.out.printf("%s -> %.2f",k,v* items.get(k)).println());
     }
 }

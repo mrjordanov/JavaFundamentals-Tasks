@@ -33,19 +33,15 @@ public class LegendaryFarmingV2 {
             }
         }
 
-        keyMaterials.entrySet().stream().sorted((m1,m2)-> {
-         int result=  m2.getValue().compareTo(m1.getValue());
-            if (result==0){
-                 result = m1.getKey().compareTo(m2.getKey());
-            }
-            return  result;
-       }).forEach(m -> System.out.println(String.format("%s: %d",m.getKey(),m.getValue())));
+        keyMaterials.entrySet().stream().filter(m->m.getKey().equals("shards")).forEach(m -> System.out.println(String.format("%s: %d",m.getKey(),m.getValue())));
+        keyMaterials.entrySet().stream().filter(m->m.getKey().equals("fragments")).forEach(m -> System.out.println(String.format("%s: %d",m.getKey(),m.getValue())));
+        keyMaterials.entrySet().stream().filter(m->m.getKey().equals("motes")).forEach(m -> System.out.println(String.format("%s: %d",m.getKey(),m.getValue())));
 
-        junks.entrySet().stream().sorted((j1,j2)-> j1.getKey().compareTo(j2.getKey()))
+        junks.entrySet().stream()
                         .forEach(j -> System.out.println(String.format("%s: %d",j.getKey(),j.getValue())));
 
 
-        keyMaterials.entrySet().stream().sorted((i1,i2)->{
+      /*  keyMaterials.entrySet().stream().sorted((i1,i2)->{
             int result= i2.getValue().compareTo(i1.getValue());
             if (result==0){
                 result=i1.getKey().compareTo(i2.getKey());
@@ -54,7 +50,7 @@ public class LegendaryFarmingV2 {
         }).forEach(i-> System.out.println(String.format("%s: %d",i.getKey(),i.getValue())));
 
         junks.entrySet().stream().sorted((l,r)->l.getKey().compareTo(r.getKey()))
-                .forEach(i-> System.out.println(String.format("%s: %d",i.getKey(),i.getValue())) );
+                .forEach(i-> System.out.println(String.format("%s: %d",i.getKey(),i.getValue())) );*/
     }
 
 
