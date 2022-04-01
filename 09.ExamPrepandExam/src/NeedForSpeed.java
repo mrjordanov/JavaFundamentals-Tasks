@@ -52,23 +52,23 @@ public class NeedForSpeed {
                 if (curFuelInCar + refuel > 75) {
                     fuelMap.put(carModel, 75);
                     int diff = 75 - curFuelInCar;
-                    System.out.printf("Car refueled with %d liters", diff).println();
+                    System.out.printf("%s refueled with %d liters", carModel, diff).println();
                 } else {
                     fuelMap.put(carModel, curFuelInCar + refuel);
-                    System.out.printf("Car refueled with %d liters", refuel).println();
+                    System.out.printf("%s refueled with %d liters", carModel, refuel).println();
                 }
             }
 
             if (command.equals("Revert")) {
                 int kilometersToRevert = Integer.parseInt(arg.split(" : ")[2]);
                 int mileAgeOfCar = mileAgeMap.get(carModel);
-                if(mileAgeOfCar-kilometersToRevert<10000){
-                    mileAgeMap.put(carModel,10000);
-                    arg= scanner.nextLine();
+                if (mileAgeOfCar - kilometersToRevert < 10000) {
+                    mileAgeMap.put(carModel, 10000);
+                    arg = scanner.nextLine();
                     continue;
-                }else {
-                    mileAgeMap.put(carModel,mileAgeOfCar-kilometersToRevert);
-                    System.out.printf("%s mileage decreased by %d kilometers",carModel,kilometersToRevert).println();
+                } else {
+                    mileAgeMap.put(carModel, mileAgeOfCar - kilometersToRevert);
+                    System.out.printf("%s mileage decreased by %d kilometers", carModel, kilometersToRevert).println();
                 }
 
             }
@@ -78,8 +78,7 @@ public class NeedForSpeed {
         }
 
         mileAgeMap.entrySet()
-                .forEach(c-> System.out.printf("%s -> Mileage: %d, Fuel in the tank: %d lt.",c.getKey(),c.getValue(),fuelMap.get(c.getKey())).println());
-
+                .forEach(c -> System.out.printf("%s -> Mileage: %d kms, Fuel in the tank: %d lt.", c.getKey(), c.getValue(), fuelMap.get(c.getKey())).println());
 
 
     }
