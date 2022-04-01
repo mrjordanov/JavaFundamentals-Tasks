@@ -10,9 +10,12 @@ public class StudentAcademy {
             String name = scanner.nextLine();
             double grade = Double.parseDouble(scanner.nextLine());
 
-            students.putIfAbsent(name,new ArrayList<>());
+            students.putIfAbsent(name, new ArrayList<>());
             students.get(name).add(grade);
         }
+
+
+
        /* students
                 .entrySet()
                 .stream()
@@ -26,8 +29,16 @@ public class StudentAcademy {
                         s.getValue().stream().mapToDouble(Double::doubleValue).average().getAsDouble())));
         */
 
-        students.entrySet().stream().filter(s1-> s1.getValue().stream().mapToDouble(Double::doubleValue).average().getAsDouble()>=4.5)
-                .forEach(s-> System.out.printf("%s -> %.2f",s.getKey(),s.getValue().stream().mapToDouble(Double::doubleValue).average().getAsDouble()).println());
+
+        students.entrySet()
+                .stream()
+                .filter(s1 -> s1.getValue().stream().mapToDouble(Double::doubleValue).average().getAsDouble() >= 4.5)
+                .sorted((s1, s2) -> {
+                    double first = s1.getValue().stream().mapToDouble(Double::doubleValue).average().getAsDouble();
+                    double second = s2.getValue().stream().mapToDouble(Double::doubleValue).average().getAsDouble();
+                    return Double.compare(second, first);
+                }).forEach(s -> System.out.printf("%s -> %.2f", s.getKey(),
+                        s.getValue().stream().mapToDouble(Double::doubleValue).average().getAsDouble()));
 
     }
 }

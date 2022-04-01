@@ -24,6 +24,12 @@ public class Orders {
             input = scanner.nextLine();
         }
 
+        items.entrySet()
+                .forEach(e-> {
+                    System.out.printf("%s -> %.2f", e.getKey(), e.getValue()* quantities.get(e.getKey())).println();
+                });
+
+
             //вземам два аргумента К=key и V=values и отзад в аргументите за принтиране имам:
             // к- взема key от първия (от items) и v- взема value-то от втория, акто той е посочен v*quantities.get(k)
             items.forEach((k,v)->
