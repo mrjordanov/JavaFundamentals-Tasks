@@ -17,7 +17,7 @@ public class PrintLargestThree {
 
         //2 вариант
       List <Integer> number= Arrays.stream(scanner.nextLine().split(" "))
-              .map(n->Integer.parseInt(n))
+              .map(Integer::parseInt)
               .sorted((l,r)->r.compareTo(l))
               .collect(Collectors.toList());
 
