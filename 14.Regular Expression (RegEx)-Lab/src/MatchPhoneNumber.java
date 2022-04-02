@@ -10,7 +10,9 @@ public class MatchPhoneNumber {
         String input= scanner.nextLine();
         String expression="\\+359(\\-|| )2\\1\\d{3}\\1\\d{4}\\b";
                           //\+359([\- ])2\1\d{3}\1\d{4}\b равносилни са изразите в скобите!
+        String exp="\\+359+([\\-||\\/])2\\1[0-9]{3}\\1[0-9]{4}\\b";
         Pattern regex= Pattern.compile(expression);
+        Pattern reg= Pattern.compile(exp);
         Matcher matcher=regex.matcher(input);
 
 

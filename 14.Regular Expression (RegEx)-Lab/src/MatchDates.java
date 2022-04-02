@@ -5,13 +5,15 @@ import java.util.regex.Pattern;
 public class MatchDates {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String input= scanner.nextLine();
-        String expression="\\b(?<day>\\d{2})([-.\\/])(?<month>[A-Z][a-z][a-z])\\2(?<year>\\d{4})\\b";
+        String input = scanner.nextLine();
+        String expression = "\\b(?<day>\\d{2})([-.\\/])(?<month>[A-Z][a-z][a-z])\\2(?<year>\\d{4})\\b";
+        String exp = "\\b(?<day>\\d{2})([\\/.-])(?<month>[A-Z][a-z]{2})(\\2)(?<year>[0-9]{4})\\b";
+        Pattern pattern = Pattern.compile(expression);
+        Matcher matcher = pattern.matcher(input);
 
-        Pattern pattern= Pattern.compile(expression);
-        Matcher matcher=pattern.matcher(input);
+        Pattern oat = Pattern.compile(exp);
 
-        while (matcher.find()){
+        while (matcher.find()) {
             System.out.printf("Day: %s, Month: %s, Year: %s",
                     matcher.group("day"),
                     matcher.group("month"),

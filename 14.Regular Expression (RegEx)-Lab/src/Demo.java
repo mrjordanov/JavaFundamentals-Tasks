@@ -15,7 +15,6 @@ public class Demo {
         // String a="\\\\"; // ->\\
         Pattern regex = Pattern.compile(expression);
         Matcher matcher=regex.matcher(text);
-
         while (matcher.find()){
             System.out.println(matcher.group(1));
             System.out.println(matcher.group(2));
