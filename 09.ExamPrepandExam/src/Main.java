@@ -2,7 +2,10 @@
 import java.util.*;
 
 public class Main {
+
     public static void main(String[] args) {
+
+
         Scanner scanner = new Scanner(System.in);
 
         String input = scanner.nextLine();
@@ -20,7 +23,6 @@ public class Main {
                 String area = token[2];
 
                 Animal animal = new Animal(animalName, foodToEat, area);
-
                 map.putIfAbsent(area, new ArrayList<>());
 
                 if (map.get(area).stream().anyMatch(a -> a.getName().equals(animalName) && a.getArea().equals(area))) {
@@ -47,6 +49,7 @@ public class Main {
                             }
                         }
                     }
+
                     if (animalToRemove != null) {
                         animalList.remove(animalToRemove);
                     }
@@ -63,7 +66,6 @@ public class Main {
             animalList.forEach(a -> System.out.printf(" %s -> %dg", a.getName(), a.getFood()).println());
         }
 
-
         System.out.println("Areas with hungry animals:");
         for (Map.Entry<String, List<Animal>> entry : map.entrySet()) {
             if (entry.getValue().size() > 0) {
@@ -73,3 +75,4 @@ public class Main {
 
     }
 }
+
